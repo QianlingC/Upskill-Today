@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+const Policy = "https://www.upskilltoday.com/privacypolicy"
+const Term = "https://www.upskilltoday.com/termsandconditions"
 
 const Footer = () => {
   return (
     <>
       <footer
-        className="text-center text-lg-start text-white "
-        style={{ backgroundColor: "#ff7b00" }}
+        className="text-center text-lg-start text-white"
+        style={{ backgroundColor: "#2d2d2d" }}
       >
         <section className="company-info border-bottom ">
           <div className="container text-center text-md-start pt-4">
@@ -20,35 +22,42 @@ const Footer = () => {
                 </h6>
 
                 <a
-                  href="#privacy"
-                  className="pe-1 text-nowrap text-white"
-                  data-bs-toggle="modal"
+                  href={Policy}
+                  className="pe-1 text-nowrap text-white hover-effect"
+                  target='_blank' 
+                  rel='noreferrer'
+                                    
                   style={{
                     textDecoration: "none",
                     fontWeight: "500",
                   }}
                 >
-                  Privacy Policy
+                  <span className="hover-effect">Privacy Policy</span>
                 </a>
                 <span>
                   {"  "}|{"  "}
                 </span>
                 <a
-                  href="#terms"
-                  className="ps-1 text-nowrap text-white"
-                  data-bs-toggle="modal"
+                  href={Term}
+                  className="ps-1 text-nowrap text-white hover-effect"
+                  target='_blank' 
+                  rel='noreferrer'
+                                 
                   style={{
                     textDecoration: "none",
                     fontWeight: "500",
                   }}
                 >
-                  Terms & Conditions
+                 <span className="hover-effect"> Terms & Conditions </span>
                 </a>
 
                 <div className="pt-3 justify-content-evenly align-items-center">
                   <a
                     href="https://www.facebook.com/helloupskilltoday"
-                    className=" btn btn-floating text-white"
+                    className="text-white btn-floating btn"
+                    target='_blank' 
+                    rel='noreferrer'
+                  
                   >
                     <i
                       className="bi bi-facebook hover-effect"
@@ -58,7 +67,10 @@ const Footer = () => {
 
                   <a
                     href="https://www.linkedin.com/company/upskilltoday"
-                    className="btn btn-floating text-white"
+                    className="btn-floating text-white btn"
+                    target='_blank' 
+                    rel='noreferrer'
+                    
                   >
                     <i
                       className="bi bi-linkedin hover-effect"
@@ -68,7 +80,10 @@ const Footer = () => {
 
                   <a
                     href="https://www.youtube.com/channel/UCEN2ltg-7TQTE1zRDWBzAOw"
-                    className=" btn btn-floating text-white"
+                    className="btn-floating text-white btn"
+                    target='_blank' 
+                    rel='noreferrer'
+                    
                   >
                     <i
                       className="bi bi-youtube hover-effect"
@@ -80,13 +95,13 @@ const Footer = () => {
 
               <div className="col-md-2 col-lg-2 col-xl-2  mb-4">
                 <h6 className="text-uppercase fw-bold mb-4">Quick links</h6>
-                <p>
+                <p className="hover-effect">
                   <Link
                     className="text-white"
                     style={{ textDecoration: "none", fontWeight: "500" }}
                     to="/Home"
                   >
-                    Home
+                    <span className="hover-effect">Home</span>
                   </Link>
                 </p>
                 <p>
@@ -95,7 +110,7 @@ const Footer = () => {
                     style={{ textDecoration: "none", fontWeight: "500" }}
                     to="/About"
                   >
-                    About
+                    <span className="hover-effect">About</span>
                   </Link>
                 </p>
 
@@ -105,7 +120,7 @@ const Footer = () => {
                     style={{ textDecoration: "none", fontWeight: "500" }}
                     to="/CareerPathway"
                   >
-                    Career Pathways
+                    <span className='hover-effect'>Career Pathways</span>
                   </Link>
                 </p>
                 <p>
@@ -114,7 +129,7 @@ const Footer = () => {
                     style={{ textDecoration: "none", fontWeight: "500" }}
                     to="/Corporate"
                   >
-                    Corporate
+                    <span className="hover-effect">Corporate</span>
                   </Link>
                 </p>
               </div>
@@ -136,7 +151,7 @@ const Footer = () => {
 
         <div
           className="text-white text-center p-4"
-          style={{ backgroundColor: "#ff7b00" }}
+          style={{ backgroundColor: "#2d2d2d" }}
         >
           <span className="text-white " style={{ fontWeight: "500" }}>
             © 2023 Copyright: Upskill Today

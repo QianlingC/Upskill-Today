@@ -1,26 +1,28 @@
-import React from 'react'
+import React from "react";
 
-import AboutUsCarousel from "./AboutUsCarousel";
+import AboutUs from "./AboutUs";
 import VisionMission from "./VisionMission";
-import WhatIsUpSkilled from "./WhatIsUpSkilled";
+import WhatIsUpSkill from "./WhatIsUpSkill";
 import WhyUpskill from "./WhyUpskill";
-import Testimontials from "./Testimontials";
+// import AboutTestimontials from "./AboutTestimontials";
+import BackTopButton from "../../components/BackToTopButton";
 
 const About = () => {
-    return (
-        <>
-            <AboutUsCarousel />
+  return (
+    <div style={{marginTop:"5%"}}>
+      <AboutUs />
 
-            <VisionMission />
+      <VisionMission />
 
-            <WhatIsUpSkilled />
+      <WhatIsUpSkill />
 
-            <WhyUpskill />
+      <WhyUpskill />
 
-            <Testimontials />
+      {/* <AboutTestimontials /> */}
 
-        </>
-    )
-}
+      <BackTopButton />
+    </div>
+  );
+};
 
 export default About;

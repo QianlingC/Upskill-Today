@@ -1,25 +1,212 @@
+.navbar-main {
+  color: black;
+  background-color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
 .navbar-image {
     display:block;
     background-size: contain;
     background-repeat: no-repeat;
     height: 60px;
-    width: 200px;
+    width: 250px;
 }
 
-.navbar-button {
+.navbar-main .link{
+  text-decoration: none;
+}
+
+
+.hover-effect:hover{
+    opacity: 1;
+    fill:rebeccapurple;
+    color: #ff7b00;
+  }
+  
+.hover-navbar:hover{
+    opacity: 1; 
+  }
+
+.navbar-main .navbar-button {
     border: none;
     outline: none;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-}
-
-.hover-effect:hover{
-    opacity: 0.8;
-    fill:rebeccapurple;
+    font-size: 1.0em;
+    font-weight: 600;
+    background-color: #ff7b00;
+    border-radius: 5px;
+    padding: 0.2rem;
+    width:125px;
   }
   
-.hover-navbar:hover{
-    opacity: 0.5;
-    fill:royalblue;
+ .navbar-main .navbar-button:hover {
+    background-color: #a60037;
+    border-color: #a60037;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);  
   }
+
+  .navbar-dropdown{
+    margin-top: -0.35rem;
+    text-decoration: none;
+    color:black;
+  }
+
+  .navbar-dropdown a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+
+  }
+
+  .navbar-dropdown .dropdown-item:hover{
+    background-color: #ff7b00;
+    color: white;
+  }
+
+  
+  .navbar-main .navbar-nav {
+    --bs-nav-link-padding-x: 0;
+    --bs-nav-link-padding-y: 0.5rem;
+    --bs-nav-link-font-weight: ;
+    --bs-nav-link-color: var(--bs-navbar-color);
+    --bs-nav-link-hover-color: #ff7b00;
+    --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+@media screen and (max-width:768px){
+  .navbar-main .menubar {
+    display: none;
+  }
+  
+}
+
+/* New CSS for NavBar.js */
+.navbar {
+  font-size: 1.0rem;
+  font-weight: 600;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 1rem 2rem;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color:black;
+  background-color: white;
+/*  box-sizing: border-box; */
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+  0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar .link{
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1%;
+  margin-bottom: 1rem;
+  border-color:black;
+/* border-bottom: 2px; */
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.navbar .link:hover{
+  color:#ff7b00;
+}
+
+.navbar .navbar-logo {
+  display: block;
+ /*background-image: url(${Upskill}); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 52px;
+  width: 252px;
+}
+
+.navbar .icon{
+  display: none;
+}
+
+@media screen and (max-width:1265px) {
+  .navbar .icon{
+    display: block;
+    background-size: contain;
+    border-width: 1px;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 0px;
+    height: 45px;
+    width: 45px;
+    font-size: 2.0rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0, 25%);
+    margin-right: 2%;
+  }
+  
+}
+
+.navbar .menu{
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+@media screen and (max-width:1265px){
+  .navbar .menu{
+    display: none;
+  }
+}
+
+
+.navbar .navbtn {
+  display: flex;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  align-items: center;
+  margin-left: 3rem;
+  border-radius: 25px;
+  border:none;
+  color:white;
+  background-color: #ff7b00;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar .navbtn:hover{
+  color:white;
+  background-color: #a60037;
+    border-color: #a60037;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);  
+
+}
+
+@media screen and (max-width:1265px) {
+  .navbar .navbtn {
+    display: none;
+  }
+  
+}
+
+
+

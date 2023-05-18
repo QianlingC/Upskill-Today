@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+
 import homemain from "../../../images/upskill-main.jpeg";
-import homebc from "../../../images/home-b2c.png";
-import homebb from "../../../images/home-tgt.jpeg";
+import home1980 from "../../../images/upskill-main-1980.jpeg"
+import homebc from "../../../images/home-b2c-1980.png";
+import homebb from "../../../images/home-tgt-1980.jpeg";
 import "./homecarousel.css";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
@@ -20,61 +22,69 @@ const HomeCarousel = () => {
       onSelect={handleSelect}
       className="carousel-home"
     >
-      <Carousel.Item>
+      <Carousel.Item className="homecarousel-item">
         <img
-          className="d-block w-100 slide-img"
-          src={homemain}
+          className="d-block w-100 slide-img img-fuild"
+          src={home1980}
           alt="First slide"
+          
         />
-        <Carousel.Caption>
+        <Carousel.Caption className="home-caption">
           <h1 className="carousel-title">UPSKILL TODAY</h1>
-          <h3 className="carousel-text pb-4 d-none d-md-block">
+          <h3 className="carousel-text pb-2 d-md-block">
             Begin Your IT Journey With Us
           </h3>
           <Button className="carousel-call">
             <Link
               className="text-decoration-none text-white"
-              to="/CareerPathways"
+              to="/CareerPathway"
             >
               Find Out More
             </Link>
           </Button>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className="homecarousel-item">
         <img
-          className="d-block w-100 slide-img"
+          className="d-block w-100 slide-img img-fluid"
           src={homebc}
           alt="Second slide"
+          
         />
-        <Carousel.Caption>
+        <Carousel.Caption className="home-caption">
           <h1 className="carousel-title">UPSKILL TODAY</h1>
-          <h3 className="carousel-text pb-4  d-none d-md-block">
+          <h3 className="carousel-text pb-2 d-md-block">
             Begin Your IT Journey With Us
           </h3>
           <Button className="carousel-call">
-            <Link className="text-decoration-none text-white" to="/Services">
+            <Link
+              className="text-decoration-none text-white"
+              to="/CareerPathway"
+            >
               Find Out More
             </Link>
           </Button>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className="homecarousel-item">
         <img
-          className="d-block w-100 slide-img"
+          className="d-block w-100 slide-img img-fluid"
           src={homebb}
           alt="Third slide"
+          
         />
-        <Carousel.Caption>
+        <Carousel.Caption className="home-caption">
           <h1 className="carousel-title">UPSKILL TODAY</h1>
-          <h3 className=" carousel-text pb-4 d-none d-md-block">
+          <h3 className=" carousel-text pb-2 d-md-block">
             Begin Your IT Journey With Us
           </h3>
-          <Button className=" carousel-call">
-            <Link className="text-decoration-none text-white" to="/Join">
-              Find Out More
-            </Link>
-          </Button>
+
+          <Link
+            className="text-decoration-none text-white"
+            to="/CareerPathway "
+          >
+            <Button className=" carousel-call">Find Out More</Button>
+          </Link>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

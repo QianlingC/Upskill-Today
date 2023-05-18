@@ -1,0 +1,15 @@
+.pathway .pathway-button{
+  font-size: clamp(1.0rem, 1.15vw, 1.25rem);
+  font-weight: 600;
+  background-color: #ff7b00;
+  border: none;
+  border-radius: 25px;
+  padding: 0.6rem;
+}
+
+.pathway .pathway-button:hover{
+  background-color: #a60037;
+  border-color: #a60037;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
