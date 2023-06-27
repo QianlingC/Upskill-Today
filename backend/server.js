@@ -344,7 +344,7 @@ const sendNotificationEmail = () => {
   const transporter = nodemailer.createTransport({
     service: "hotmail",
     auth: {
-      user: "gecoupskill@hotmail.com",
+      user: "",
       pass: "",
     },
   });
