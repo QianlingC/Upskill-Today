@@ -148,7 +148,7 @@ const RegisterYourInterest = () => {
     if (formData.email !== "" || formData.contact !== "") {
       const regexErrors = regexValidation();
       if (Object.keys(regexErrors).length !== 0) {
-        console.log("Length of RegexErrors: ", Object.keys(regexErrors).length);
+     //   console.log("Length of RegexErrors: ", Object.keys(regexErrors).length);
         setIsFormComplete(false);
         //  if(!isFormComplete){
         setValidated(false);
@@ -183,7 +183,6 @@ const RegisterYourInterest = () => {
       setSubmitResult(true);
 
       // backend server api endpoint (localhost:5000/api/registration)
-      //Axios.post(`${process.env.REACT_APP_API_URL}/registration`, formData)
       // Axios.post(`http://localhost:${port}/api/registration`, formData)
       Axios.post("https://backend-rust-three.vercel.app/api/registration", formData)
         .then((response) => {
@@ -194,8 +193,8 @@ const RegisterYourInterest = () => {
             "Your registration has been submitted. Thank You!"
           );
         })
-        .catch((error) => {
-          console.log(error.response.data);
+        .catch((error) => {v
+          console.log(error);
           handleServerResponse(false, error.response.data.error);
         });
     }
@@ -226,7 +225,7 @@ const RegisterYourInterest = () => {
   };
 
   function submitInfo() {
-    console.log(process.env.REACT_APP_API_URL);
+   // console.log(process.env.REACT_APP_API_URL);
     setSubmitResult(false);
   }
   return (

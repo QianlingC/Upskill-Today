@@ -51,9 +51,11 @@ const LoginPage = () => {
          // console.log(userInfo.Code);
           if (userInfo.Code === 11111) {
             alert("Email does not exist!");
-          } else if (userInfo.email === email) {
+          } else if (userInfo.email === email && (userInfo.roles[0]==='admin' || userInfo.roles[0]==='user')) {
             setAuth(true)
             navigate("/Admin");
+          } else {
+            alert("Currently, you have not assigned any role, please contact the IT Administrator");
           }
         });
       } else {
