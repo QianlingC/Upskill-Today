@@ -328,6 +328,13 @@ app.post("/login", async (req, res) => {
   }
 });
 
+//Link to Admin Page AuthProvider.js
+app.get("/login", async (req, res) => {
+  const { email } = req.body;
+  const userDoc = await User.findOne({ email });
+  res.json(userDoc);
+});
+
 //Link to Upskill Today Admin App - header.js
 app.get("/user", async (req, res) => {
   const { email } = req.body;
